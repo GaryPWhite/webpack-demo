@@ -1,11 +1,17 @@
 import _ from 'lodash';
+import printme from './print.js';
 
 function component() {
   let element = document.createElement('div');
+  let btn = document.createElement('button');
+
 
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-  element.appendChild(myIcon);
+  btn.innerHTML = 'Click me and I print lol sweg';
+  btn.onclick = printme;
+
+  element.appendChild(btn);
 
   return element;
 }
